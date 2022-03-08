@@ -16,7 +16,7 @@ async function registrarUsuario() {
         return;
     }
 
-    const request = await fetch('api/usuarios', {
+    const request = await fetch('api/v1/usuarios', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -24,5 +24,6 @@ async function registrarUsuario() {
         },
         body: JSON.stringify(datos)
     })
-    const usuarios = await request.json()
+    alert("La cuenta fue creada con exito")
+    window.location.href = 'login.html'
 }
